@@ -1,7 +1,8 @@
 // Any state you wish to enable with the bot should be registered here
 const contextmap = {
     "default": require("./contexts/Unregistered"),
-    "home": require("./contexts/Home.js"),
+    "home": require("./contexts/Home"),
+    "event": require("./contexts/Event"),
 }
 
 module.exports = (key) => {

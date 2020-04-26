@@ -8,8 +8,12 @@ const ContextState = require("./models/contextstate");
 const db = require("./db");
 const Session = require("./session");
 
+const cron = require("./event_cron");
+
 
 const bot = new TelegramBot(token, {polling: true});
+
+cron(bot);
 
 const initBot = async () => {
     // initialise
